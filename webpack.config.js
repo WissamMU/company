@@ -8,11 +8,17 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         filename: 'js/index.js',
     },
-
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'public'),
+        },
+        //compress: true,
+        port: 9000,
+    },
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.(sass|css|scss)$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
