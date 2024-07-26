@@ -5,15 +5,9 @@ const path = require('path');
 module.exports = {
     entry: './src/js/index.js',
     output: {
+        publicPath: '/',
         path: path.resolve(__dirname, 'build'),
         filename: 'js/index.js',
-    },
-    devServer: {
-        static: {
-            directory: path.join(__dirname, 'public'),
-        },
-        //compress: true,
-        port: 9000,
     },
     module: {
         rules: [
@@ -30,6 +24,26 @@ module.exports = {
                     "sass-loader",
                 ],
             },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: "images",
+                        }
+                    },
+                ],
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+            },
         ],
     },
 
@@ -40,4 +54,15 @@ module.exports = {
             filename: "index.html",
         }),
     ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'build'),
+        },
+        devMiddleware: {
+            writeToDisk: true,
+        },
+        //compress: true,
+        port: 9000,
+        open: true,
+    },
 };

@@ -1,3 +1,51 @@
-body{
-    background-color: red;
+$main-color: #312f55    ;
+$custome-color: #eee;
+$redd : red;
+
+@font-face {
+    font-family: "cairoFont";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+
+body {
+    font-family: "cairoFont", 'Cambria, Cochin, Georgia, Times, Times New Roman, serif' !important;
+}
+
+.top-menu{
+    .navbar{
+        background-color: $main-color !important;
+        font-weight: bold !important;
+        padding:  0 100px !important;
+        // change when i get font awesome
+        // .navbar-toggler-icon{
+        //     color: $custome-color;
+        // }
+        .navbar-nav{
+            li>a{
+                transition-property: background-color ;
+                transition: .5s;
+                color: white !important;
+                &:hover{
+                    background-color: $custome-color;
+                    color: $redd !important;
+                    border-bottom: 1px solid $redd;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:991px){
+    .top-menu{
+        .navbar{
+            padding:0 20px !important;
+            .navbar-nav{
+                a{
+                    border-bottom: none !important; 
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
 }
