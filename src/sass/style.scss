@@ -1,6 +1,6 @@
-$main-color: #312f55    ;
-$custome-color: #eee;
-$redd : red;
+$main-color: #312f55;
+$custome-color: #eeeeee;
+$redd : #FF7766;
 
 @font-face {
     font-family: "cairoFont";
@@ -10,22 +10,21 @@ $redd : red;
 body {
     font-family: "cairoFont", 'Cambria, Cochin, Georgia, Times, Times New Roman, serif' !important;
 }
+
 // navbar
-.top-menu{
-    .navbar{
-        background-color: $main-color !important;
+.top-menu {
+    .navbar {
+        background-color: rgba($main-color,0.8) !important;
         font-weight: bold !important;
-        padding:  0 100px !important;
-        // change when i get font awesome
-        // .navbar-toggler-icon{
-        //     color: $custome-color;
-        // }
-        .navbar-nav{
-            li>a{
-                transition-property: background-color ;
+        padding: 0 100px !important;
+
+        .navbar-nav {
+            li>a {
+                transition-property: background-color;
                 transition: .5s;
-                color: white !important;
-                &:hover{
+                color: $main-color !important;
+
+                &:hover {
                     background-color: $custome-color;
                     color: $redd !important;
                     border-bottom: 1px solid $redd;
@@ -35,18 +34,18 @@ body {
     }
 }
 
-.carousel-top{
-    .row{
+.carousel-top {
+    .row {
         display: block;
-        
-        .carousel-item{
-            img{
+
+        .carousel-item {
+            img {
                 height: 500px;
             }
-            
-            .overlay{
+
+            .overlay {
                 position: absolute;
-                background-color: rgba(100,100,150,0.5) !important;
+                background-color: rgba(100, 100, 150, 0.5) !important;
                 top: 0;
                 right: 0;
                 height: 100%;
@@ -59,25 +58,29 @@ body {
             }
         }
     }
-    .carousel-indicators{
-        li{
+
+    .carousel-indicators {
+        li {
             width: 15px;
             height: 15px;
             border-radius: 50%;
             margin: 20px 5px 0 0;
-            &.active{
+
+            &.active {
                 background-color: $main-color;
             }
         }
     }
-    .carousel-caption{
-        h5{
+
+    .carousel-caption {
+        h5 {
             font-weight: bold;
             color: white;
             margin-bottom: 50px;
             font-size: 50px;
         }
-        p{
+
+        p {
             width: 50%;
             color: $custome-color;
         }
@@ -85,61 +88,147 @@ body {
 }
 
 // custom btn 
-.custom-btn{
+.custom-btn {
     padding: 10px 20px;
     color: $main-color !important;
     border: 1px solid $main-color !important;
     font-weight: bold !important;
 
     &:hover,
-    &:focus{
+    &:focus {
         background-color: $main-color;
         color: $redd !important;
         border: 1px solid $redd !important;
     }
 }
 
+.who-are-we {
+    .custom-paragraph {
+        line-height: 2em;
+    }
 
+    .custom-btn-main {
+        padding: 20px;
+        background-color: $main-color !important;
+        color: white;
+        font-weight: bold;
+        width: 250px;
 
-
-@media(min-width:1199px){
-    .carousel-item{
-        img{
-            height: 600px !important;
+        &:hover {
+            color: $redd;
         }
-        .carousel-caption{
-            h5{
-                font-size: 40px !important;
+    }
+
+    .company-name {
+        color: $main-color;
+        font-weight: bold !important;
+
+    }
+}
+
+.latest-projects {
+    background-color: #FFFFCC;
+
+    #latest-company-projects {
+        width: 80%;
+
+        .thumbnail2 {
+            position: relative;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+            .caption2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgba(65, 155, 155, 0.5);
+                max-width: 100%;
+                height: 100%;
+                padding: 2%;
+                text-align: center;
+                color: #fff !important;
+                display: none;
             }
-            p{
-                width: 70% !important;
+
+            .project-category {
+                position: absolute;
+                right: 0px;
+                top: 5%;
+                font-weight: bold;
+                background-color: rgba(240, 240, 240, 0.75);
+                padding: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                box-shadow: 0px 5px 20px 0px #202020;
             }
+
+        }
+
+        a.carousel-control-next {
+            position: absolute;
+            left: -5%;
+            color: #252222;
+            width: 0;
+        }
+
+        a.carousel-control-prev {
+            position: absolute;
+            right: -6%;
+            color: #252222;
+            width: 0;
         }
     }
 }
-@media(max-width:991px){
-    .top-menu{
-        .navbar{
-            padding:0 20px !important;
-            .navbar-nav{
-                a{
-                    border-bottom: none !important; 
+
+
+@media(min-width:1199px) {
+    .top-menu {
+        .carousel-item {
+            img {
+                height: 600px !important;
+            }
+
+            .carousel-caption {
+                h5 {
+                    font-size: 40px !important;
+                }
+
+                p {
+                    width: 70% !important;
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width:991px) {
+    .top-menu {
+        .navbar {
+            padding: 0 20px !important;
+
+            .navbar-nav {
+                a {
+                    border-bottom: none !important;
                     padding-right: 5px;
                 }
             }
         }
     }
 }
-@media(max-width:767px){
-    .carousel-item{
-        img{
+
+@media(max-width:767px) {
+    .carousel-item {
+        img {
             height: 400px !important;
         }
-        .carousel-caption{
-            h5{
+
+        .carousel-caption {
+            h5 {
                 font-size: 30px !important;
             }
-            p{
+
+            p {
                 width: 80% !important;
             }
         }
