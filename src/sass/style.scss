@@ -14,7 +14,7 @@ body {
 // navbar
 .top-menu {
     .navbar {
-        background-color: rgba($main-color,0.8) !important;
+        background-color: rgba($main-color, 0.8) !important;
         font-weight: bold !important;
         padding: 0 100px !important;
 
@@ -107,17 +107,7 @@ body {
         line-height: 2em;
     }
 
-    .custom-btn-main {
-        padding: 20px;
-        background-color: $main-color !important;
-        color: white;
-        font-weight: bold;
-        width: 250px;
 
-        &:hover {
-            color: $redd;
-        }
-    }
 
     .company-name {
         color: $main-color;
@@ -126,8 +116,20 @@ body {
     }
 }
 
+.custom-btn-main {
+    padding: 20px;
+    background-color: $main-color !important;
+    color: white;
+    font-weight: bold;
+    width: 250px;
+
+    &:hover {
+        color: $redd;
+    }
+}
+
 .latest-projects {
-    background-color: #FFFFCC;
+    background-color: rgba($main-color, 0.4);
 
     #latest-company-projects {
         width: 80%;
@@ -148,6 +150,13 @@ body {
                 text-align: center;
                 color: #fff !important;
                 display: none;
+                align-content: center;
+                h5{                    
+                    font-size: 25px;
+                }
+                p{
+                    font-size: 15px;
+                }
             }
 
             .project-category {
@@ -177,6 +186,11 @@ body {
             color: #252222;
             width: 0;
         }
+    }
+
+    .custom-img-latest-work {
+        height: 400px !important;
+        width: 100%!important;
     }
 }
 

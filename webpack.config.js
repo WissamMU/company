@@ -44,6 +44,13 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
             },
+            {
+                test: require.resolve("jquery"),
+                loader: "expose-loader",
+                options: {
+                    exposes: ["$", "jQuery"],
+                },
+            },
         ],
     },
 
