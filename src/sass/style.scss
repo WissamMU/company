@@ -151,10 +151,12 @@ body {
                 color: #fff !important;
                 display: none;
                 align-content: center;
-                h5{                    
+
+                h5 {
                     font-size: 25px;
                 }
-                p{
+
+                p {
                     font-size: 15px;
                 }
             }
@@ -190,10 +192,71 @@ body {
 
     .custom-img-latest-work {
         height: 400px !important;
-        width: 100%!important;
+        width: 100% !important;
     }
 }
 
+.Customer-Review {
+    .custom-img {
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .custom-paragraph {
+        line-height: 2em;
+    }
+
+    .fa-angle-right,
+    .fa-angle-left {
+        color: #252222;
+    }
+
+    a.carousel-control-next {
+        position: absolute;
+        left: 7%;
+        width: 0;
+    }
+
+    a.carousel-control-prev {
+        position: absolute;
+        right: 7%;
+        width: 0;
+    }
+
+}
+
+.clients {
+    background-color: #419B9B;
+
+    img {
+        height: 120px;
+    }
+}
+
+.latest-posts {
+    .card-body {
+        width: 90%;
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+        position: relative;
+        background-color: white;
+        top: -17px;
+        left: -5%;
+    }
+
+    .card-title {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+    img{
+        height:350px;
+        width: 350px;
+    }
+}
 
 @media(min-width:1199px) {
     .top-menu {
