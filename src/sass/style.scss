@@ -1,5 +1,5 @@
 $main-color: #312f55;
-$custome-color: #eeeeee;
+$custom-color: #eeeeee;
 $redd : #FF7766;
 
 @font-face {
@@ -25,7 +25,7 @@ body {
                 color: $main-color !important;
 
                 &:hover {
-                    background-color: $custome-color;
+                    background-color: $custom-color;
                     color: $redd !important;
                     border-bottom: 1px solid $redd;
                 }
@@ -82,7 +82,7 @@ body {
 
         p {
             width: 50%;
-            color: $custome-color;
+            color: $custom-color;
         }
     }
 }
@@ -252,9 +252,90 @@ body {
     .card-text {
         font-size: 14px;
     }
-    img{
-        height:350px;
+
+    img {
+        height: 350px;
         width: 350px;
+    }
+}
+
+footer {
+    height: 450px;
+    background-color: $main-color;
+
+    h2 {
+        color: $custom-color;
+        font-size: 150%;
+    }
+
+    .line1 {
+        width: 5%;
+        border-top: 3px solid $custom-color;
+    }
+
+    #footer-nav-links {
+        a {
+            text-decoration: none;
+            color: #BBBBBB;
+            margin-left: 15px;
+            font-size: 90%;
+
+            &:hover,
+            &:focus {
+                color: $custom-color;
+            }
+        }
+    }
+
+    .line2 {
+        width: 60%;
+        border-top: 3px solid $custom-color;
+    }
+
+    .form {
+        margin-right: 48px;
+        margin-left: 48px;
+
+        input {
+            background-color: #202020;
+            border-radius: 1px;
+            border: 0px;
+
+            &:focus {
+                border-color: $custom-color;
+                box-shadow: 0 0 2px 0 $custom-color;
+                background-color: #202020;
+                color: $custom-color
+            }
+        }
+    }
+
+    .btn-light {
+
+        &:hover,
+        &:focus {
+            color: $custom-color !important;
+            background-color: $main-color !important;
+            border: 1px solid $custom-color;
+            transition-property: border, color, background-color;
+            transition-duration: 0.3s;
+        }
+    }
+
+    .copyright {
+        color: #969696;
+        font-size: 90%;
+        font-weight: bold;
+    }
+
+    .copyright-link {
+        text-decoration: none !important;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: $custom-color;
+        }
     }
 }
 
