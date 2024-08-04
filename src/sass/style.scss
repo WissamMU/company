@@ -1,6 +1,7 @@
-$main-color: #312f55;
-$custom-color: #eeeeee;
-$redd : #FF7766;
+@import"./_variable.scss";
+@import"./projects.scss";
+
+
 
 @font-face {
     font-family: "cairoFont";

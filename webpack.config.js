@@ -55,10 +55,16 @@ module.exports = {
     },
 
     plugins: [
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "css/style.css",
+        }),
         new HtmlWebpackPlugin({
             template: "./src/index.html",
             filename: "index.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/projects.html",
+            filename: "projects.html",
         }),
     ],
     devServer: {
