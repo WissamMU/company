@@ -66,6 +66,10 @@ module.exports = {
             template: "./src/projects.html",
             filename: "projects.html",
         }),
+        new HtmlWebpackPlugin({
+            template: "./src/project-details.html",
+            filename: "project-details.html",
+        }),
     ],
     devServer: {
         static: {

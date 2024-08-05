@@ -80,6 +80,17 @@ button {
             }
         }
     }
+    #image-gallery{
+        img{
+            max-height: 600px;
+        }
+    }
+    .thumbnail {
+        img{
+            width: 250px;
+            height:250px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
