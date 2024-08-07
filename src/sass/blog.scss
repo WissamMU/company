@@ -1,4 +1,3 @@
-
 .banner-blog {
     .banner-img {
         background-image: url(../images/banner-blog.jpg);
@@ -22,7 +21,15 @@
                 /*إخفاء جميع المعلومات بعد السطر الأول*/
                 text-overflow: ellipsis;
                 /*إضافة النقط الثلاث في نهاية الجملة*/
-                color: $card-text-color;
+                color: $main-color;
+            }
+        }
+        .thumbnail-size{
+            width: 350px;
+            height: 200px;
+            overflow: hidden;
+            img.card-img {
+                //height: 250px !important;
             }
         }
     }
@@ -39,7 +46,7 @@
     .card {
         .card-body {
             .card-text {
-                color: $card-text-color;
+                color: $main-color;
             }
 
             .card-title {
@@ -54,8 +61,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $card-text-color;
-    color: $card-text-color;
+    border: 1px solid $main-color;
+    color: $main-color;
     width: 45px;
     height: 45px;
     border-radius: 3px;
