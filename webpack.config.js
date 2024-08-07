@@ -70,6 +70,10 @@ module.exports = {
             template: "./src/project-details.html",
             filename: "project-details.html",
         }),
+        new HtmlWebpackPlugin({
+            template: "./src/blog.html",
+            filename: "blog.html",
+        }),
     ],
     devServer: {
         static: {
