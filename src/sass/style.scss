@@ -1,6 +1,8 @@
 @import"./_variable.scss";
 @import"./projects.scss";
 @import"./blog.scss";
+@import"./about.scss";
+@import"./contact.scss";
 
 
 @font-face {
@@ -26,11 +28,17 @@ body {
                 color: $main-color !important;
 
                 &:hover {
-                    background-color: $custom-color;
+                    background-color: rgba($main-color, 0.2);
                     color: $redd !important;
                     border-bottom: 1px solid $redd;
                 }
             }
+
+            .active a {
+                background-color: rgba($main-color, 0.2);
+                color: $redd !important;
+                border-bottom: 1px solid $redd;
+                }
         }
     }
 }
